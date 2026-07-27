@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let repo = "";
-if (isGithubActions) {
+let repo = process.env.NEXT_PUBLIC_BASE_PATH || "";
+if (!repo && isGithubActions) {
   const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
   if (repoName) {
     repo = `/${repoName}`;

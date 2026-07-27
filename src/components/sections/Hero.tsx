@@ -6,6 +6,8 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, ArrowDown, Calendar, Compass } from "lucide-react";
 
+import { getAssetPath } from "@/utils/getAssetPath";
+
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -102,7 +104,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none z-0"
       >
-        <source src="/assets/videos/videointro.mp4" type="video/mp4" />
+        <source src={getAssetPath("/assets/videos/videointro.mp4")} type="video/mp4" />
       </video>
 
       {/* Background Interactive Water Canvas */}
