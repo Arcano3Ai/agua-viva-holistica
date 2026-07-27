@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-turquoise: #38b6c8;
+  --color-sage: #7fae8c;
+  --color-ivory: #fafaf7;
+  --color-gold: #c7a34b;
+  --color-dark: #2e2e2e;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fafaf7;
+  color: #2e2e2e;
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafaf7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7fae8c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38b6c8;
+}
+
+/* Custom Utilities for Glassmorphism & Gold Effects */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(199, 163, 75, 0.18);
+    box-shadow: 0 10px 30px -5px rgba(56, 182, 200, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(199, 163, 75, 0.45);
+    box-shadow: 0 20px 40px -10px rgba(56, 182, 200, 0.18);
+  }
+
+  .glass-navbar {
+    background: rgba(250, 250, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(199, 163, 75, 0.15);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #c7a34b 0%, #dfbe71 50%, #aa823a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-turquoise-gradient {
+    background: linear-gradient(135deg, #38b6c8 0%, #7ed4dd 50%, #1b7b8d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #c7a34b 0%, #d3a343 50%, #aa823a 100%);
+  }
+
+  .bg-turquoise-gradient {
+    background: linear-gradient(135deg, #38b6c8 0%, #2399ac 100%);
+  }
+
+  .bg-hero-gradient {
+    background: radial-gradient(circle at 50% 30%, rgba(56, 182, 200, 0.12) 0%, rgba(127, 174, 140, 0.08) 40%, rgba(250, 250, 247, 0.95) 100%);
+  }
+
+  .gold-border-glow {
+    box-shadow: 0 0 20px rgba(199, 163, 75, 0.25);
+  }
+}
+
+/* Water Drop Loader & Canvas Animation Keyframes */
+@keyframes lotusPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.animate-lotus-pulse {
+  animation: lotusPulse 3s ease-in-out infinite;
+}
