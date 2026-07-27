@@ -337,3 +337,21 @@ export const ADRIAN_GUIDE: GuideInfo = {
     "Acompañamiento Espiritual Consciente"
   ]
 };
+
+export const LILIVETT_GUIDE: GuideInfo = {
+  name: "Lilivett Muñoz",
+  title: "Maestra Ceremonial & Especialista Holística",
+  role: "Co-Fundadora & Terapeuta Holística",
+  quote: "La sanación ocurre cuando abrimos el corazón a la medicina sagrada de la tierra, la luz de los cristales y la sabiduría del alma.",
+  story: "Co-fundadora de Agua Viva Holística, Lilivett es especialista en guiar procesos profundos de sanación femenina, armonización energética y reconexión espiritual. Su presencia amorosa y canalización sutil crean un espacio contenedor de alta vibración para liberar bloqueos y restaurar la vitalidad física, mental y emocional.",
+  imageMeditation: "/images/lilivett_pendulo.jpg",
+  imageStaff: "/images/lilivett_cuarzos.jpg",
+  specialties: [
+    "Ceremonias de Cacao & Círculos Sagrados",
+    "Sanación de Útero & Linaje Femenino",
+    "Cristaloterapia & Alineación con Cuarzos",
+    "Armonización & Consulta con Péndulo"
+  ]
+};
+
+export const TEAM_GUIDES: GuideInfo[] = [ADRIAN_GUIDE, LILIVETT_GUIDE];
