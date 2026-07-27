@@ -82,9 +82,16 @@ export default function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-playfair text-xl font-bold text-[#2E2E2E] group-hover:text-[#38B6C8] transition-colors mb-3">
+                  <h3 className="font-playfair text-xl font-bold text-[#2E2E2E] group-hover:text-[#38B6C8] transition-colors mb-2">
                     {service.title}
                   </h3>
+
+                  {/* Facilitator Badge */}
+                  {service.facilitator && (
+                    <span className="inline-block text-[11px] font-poppins font-medium text-[#7FAE8C] bg-[#7FAE8C]/10 border border-[#7FAE8C]/20 px-2.5 py-0.5 rounded-full mb-3">
+                      Guía: {service.facilitator}
+                    </span>
+                  )}
 
                   {/* Description */}
                   <p className="font-poppins text-sm text-[#2E2E2E]/75 font-light leading-relaxed mb-6">

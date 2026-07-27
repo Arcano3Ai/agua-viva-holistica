@@ -7,6 +7,7 @@ export interface ServiceItem {
   duration: string;
   benefits: string[];
   image: string;
+  facilitator?: string;
 }
 
 export interface BenefitItem {
@@ -26,6 +27,7 @@ export interface EventItem {
   location: string;
   image: string;
   price: string;
+  facilitator?: string;
 }
 
 export interface TestimonialItem {
@@ -59,7 +61,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Gem",
     duration: "60 min",
     benefits: ["Alineación de Chakras", "Alivio del estrés profundo", "Equilibrio electro-vibracional"],
-    image: "/images/service-cuarzos.png"
+    image: "/images/service-cuarzos.png",
+    facilitator: "Lilivett Muñoz & Adrián"
   },
   {
     id: "armonizacion-pendulo",
@@ -69,7 +72,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Compass",
     duration: "50 min",
     benefits: ["Claridad mental y emocional", "Diagnóstico de bloqueos energéticos", "Sensación de ligereza inmediata"],
-    image: "/images/service-pendulo.png"
+    image: "/images/lilivett_pendulo.jpg",
+    facilitator: "Lilivett Muñoz"
   },
   {
     id: "limpiezas-energeticas",
@@ -79,7 +83,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Sparkles",
     duration: "75 min",
     benefits: ["Purificación de aura y ambientes", "Protección contra energías densas", "Renovación espiritual"],
-    image: "/images/service-limpieza.png"
+    image: "/images/service-limpieza.png",
+    facilitator: "Adrián El Portador de la Lámpara"
   },
   {
     id: "tarot-terapeutico",
@@ -89,7 +94,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "BookOpenCheck",
     duration: "60 min",
     benefits: ["Autoconocimiento elevado", "Desbloqueo de decisiones estancadas", "Integración de sombra y luz"],
-    image: "/images/service-tarot.png"
+    image: "/images/service-tarot.png",
+    facilitator: "Lilivett Muñoz"
   },
   {
     id: "ceremonias-cacao",
@@ -99,17 +105,19 @@ export const SERVICES: ServiceItem[] = [
     iconName: "HeartHandshake",
     duration: "120 min",
     benefits: ["Apertura del chakra corazón", "Liberación emocional suave", "Conexión profunda con la comunidad"],
-    image: "/images/cacao.png"
+    image: "/images/cacao.png",
+    facilitator: "Lilivett Muñoz & Adrián"
   },
   {
     id: "circulos-mujeres",
-    title: "Círculos de mujeres",
+    title: "Círculos de mujeres & Sanación de útero",
     shortDescription: "Espacio contenedor de sororidad, sanación del linaje femenino y nutrición del alma.",
-    fullDescription: "Espacio seguro y amoroso donde las mujeres comparten, honran la ciclicidad lunar y sanan la herida ancestral. A través de la palabra sagrada, la danza y la meditación guiada, reconectamos con la diosa interior.",
+    fullDescription: "Espacio seguro y amoroso donde las mujeres comparten, honran la ciclicidad lunar y sanan la herida ancestral. A través de la palabra sagrada, el Rito de la Matriz y la meditación guiada, reconectamos con la diosa interior.",
     iconName: "Users",
     duration: "90 min",
     benefits: ["Sanación del linaje femenino", "Red de contención amorosa", "Honra de la sagrada ciclicidad"],
-    image: "/images/service-circulo.png"
+    image: "/images/service-circulo.png",
+    facilitator: "Lilivett Muñoz"
   },
   {
     id: "elaboracion-mandalas",
@@ -119,7 +127,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Palette",
     duration: "90 min",
     benefits: ["Desarrollo de la atención plena", "Expresión creativa liberadora", "Reducción de la ansiedad"],
-    image: "/images/about.png"
+    image: "/images/about.png",
+    facilitator: "Lilivett Muñoz"
   },
   {
     id: "ojos-de-dios",
@@ -129,17 +138,19 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Flower2",
     duration: "90 min",
     benefits: ["Meditación activa a través del hilo", "Creación de amuleto personal", "Paz interior sostenida"],
-    image: "/images/quartz.png"
+    image: "/images/quartz.png",
+    facilitator: "Lilivett Muñoz"
   },
   {
     id: "meditacion",
-    title: "Meditación",
+    title: "Meditación & Fuego Sagrado",
     shortDescription: "Sesiones guiadas de Mindfulness, Pranayama y viajes sonoros con cuencos de cuarzo.",
     fullDescription: "Prácticas de quietud mental y presencia consciente. Guiamos técnicas de respiración (Pranayama) e inmersion en frecuencias solfeggio para reducir la presión sanguínea y cultivar serenidad permanente.",
     iconName: "Sun",
     duration: "45 min",
     benefits: ["Reducción de cortisol (estrés)", "Mayor enfoque y concentración", "Estado de paz extendido"],
-    image: "/images/meditation.png"
+    image: "/images/meditation.png",
+    facilitator: "Adrián El Portador de la Lámpara"
   },
   {
     id: "reiki",
@@ -149,7 +160,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "HandHeart",
     duration: "60 min",
     benefits: ["Aceleración de procesos curativos", "Relajación física profunda", "Revitalización del campo áurico"],
-    image: "/images/service-cuarzos.png"
+    image: "/images/service-cuarzos.png",
+    facilitator: "Adrián & Lilivett Muñoz"
   }
 ];
 

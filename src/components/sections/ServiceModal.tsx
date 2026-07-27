@@ -53,12 +53,19 @@ export default function ServiceModal({ service, onClose }: ServiceModalProps) {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAF7] via-[#FAFAF7]/30 to-transparent" />
-            <div className="absolute bottom-4 left-6 right-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C7A34B] text-white text-xs font-semibold uppercase tracking-wider shadow-sm">
-                <Clock className="w-3.5 h-3.5" />
-                {service.duration}
-              </span>
-              <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-[#2E2E2E] mt-2">
+            <div className="absolute bottom-4 left-6 right-6 flex flex-col items-start gap-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C7A34B] text-white text-xs font-semibold uppercase tracking-wider shadow-sm">
+                  <Clock className="w-3.5 h-3.5" />
+                  {service.duration}
+                </span>
+                {service.facilitator && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#487455] border border-[#7FAE8C]/30 text-xs font-semibold shadow-sm">
+                    Guía: {service.facilitator}
+                  </span>
+                )}
+              </div>
+              <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-[#2E2E2E] mt-1">
                 {service.title}
               </h3>
             </div>
