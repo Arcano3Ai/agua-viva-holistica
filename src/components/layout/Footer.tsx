@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, Music, Heart } from "lucide-react";
 import PrivacyModal from "./PrivacyModal";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function Footer() {
   const [privacyOpen, setPrivacyOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Footer() {
             <Link href="#hero" className="flex items-center gap-3">
               <div className="relative w-12 h-12 rounded-full border border-[#C7A34B] bg-white p-0.5 overflow-hidden shadow-md">
                 <Image
-                  src="/images/logo.png"
+                  src={getAssetPath("/images/logo.png")}
                   alt="Agua Viva Holística Logo"
                   fill
                   className="object-contain p-0.5"

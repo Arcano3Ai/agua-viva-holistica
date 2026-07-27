@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Clock, CheckCircle2, Calendar } from "lucide-react";
 import Image from "next/image";
 import { ServiceItem } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 interface ServiceModalProps {
   service: ServiceItem | null;
@@ -46,7 +47,7 @@ export default function ServiceModal({ service, onClose }: ServiceModalProps) {
           {/* Modal Header Image */}
           <div className="relative h-56 sm:h-64 w-full">
             <Image
-              src={service.image}
+              src={getAssetPath(service.image)}
               alt={service.title}
               fill
               className="object-cover"

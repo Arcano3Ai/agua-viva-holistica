@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Droplet, Heart, ShieldCheck, Sun, Flame, Sparkles, Compass } from "lucide-react";
 import { ADRIAN_GUIDE } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function About() {
   return (
@@ -27,7 +28,7 @@ export default function About() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80">
               <div className="aspect-[4/5] relative w-full">
                 <Image
-                  src="/images/about.png"
+                  src={getAssetPath("/images/about.png")}
                   alt="Santuario Agua Viva Holística"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -123,7 +124,7 @@ export default function About() {
             <div className="lg:col-span-5 grid grid-cols-2 gap-4">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-[3/4] group">
                 <Image
-                  src={ADRIAN_GUIDE.imageMeditation}
+                  src={getAssetPath(ADRIAN_GUIDE.imageMeditation)}
                   alt={`${ADRIAN_GUIDE.name} en Meditación`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -137,7 +138,7 @@ export default function About() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-[3/4] group mt-6">
                 <Image
-                  src={ADRIAN_GUIDE.imageStaff}
+                  src={getAssetPath(ADRIAN_GUIDE.imageStaff)}
                   alt={`${ADRIAN_GUIDE.name} ${ADRIAN_GUIDE.title}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

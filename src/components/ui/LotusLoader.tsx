@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function LotusLoader() {
   const [loading, setLoading] = useState(true);
@@ -39,7 +40,7 @@ export default function LotusLoader() {
               >
                 <div className="relative w-32 h-32 rounded-full border border-[#C7A34B]/30 flex items-center justify-center p-2 shadow-gold-glow">
                   <Image
-                    src="/images/logo.png"
+                    src={getAssetPath("/images/logo.png")}
                     alt="Agua Viva Holística"
                     width={110}
                     height={110}

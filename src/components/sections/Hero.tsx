@@ -130,7 +130,7 @@ export default function Hero() {
         >
           <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full border border-[#C7A34B]/40 p-2 glass-card shadow-gold-glow flex items-center justify-center">
             <Image
-              src="/images/logo.png"
+              src={getAssetPath("/images/logo.png")}
               alt="Logo Agua Viva Holística"
               width={150}
               height={150}

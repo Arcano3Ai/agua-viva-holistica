@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { TESTIMONIALS } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,7 +79,7 @@ export default function Testimonials() {
               <div className="flex items-center gap-4 border-t border-[#C7A34B]/15 pt-6">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#C7A34B]/40 shrink-0 shadow-md">
                   <Image
-                    src={TESTIMONIALS[currentIndex].image}
+                    src={getAssetPath(TESTIMONIALS[currentIndex].image)}
                     alt={TESTIMONIALS[currentIndex].name}
                     fill
                     className="object-cover"

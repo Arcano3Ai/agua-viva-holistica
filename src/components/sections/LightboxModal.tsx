@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles } from "lucide-react";
 import { GalleryItem } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 interface LightboxModalProps {
   item: GalleryItem | null;
@@ -46,7 +47,7 @@ export default function LightboxModal({ item, onClose }: LightboxModalProps) {
           {/* Large Image Container */}
           <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-black">
             <Image
-              src={item.image}
+              src={getAssetPath(item.image)}
               alt={item.title}
               fill
               className="object-cover"

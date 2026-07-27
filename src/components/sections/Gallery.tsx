@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, Sparkles } from "lucide-react";
 import { GALLERY_ITEMS, GalleryItem } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 import LightboxModal from "./LightboxModal";
 
 export default function Gallery() {
@@ -64,7 +65,7 @@ export default function Gallery() {
               >
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src={item.image}
+                    src={getAssetPath(item.image)}
                     alt={item.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

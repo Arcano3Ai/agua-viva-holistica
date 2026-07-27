@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +48,7 @@ export default function Navbar() {
         <Link href="#hero" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-full border border-[#C7A34B]/40 overflow-hidden bg-white/60 p-0.5 shadow-sm group-hover:border-[#38B6C8] transition-colors">
             <Image
-              src="/images/logo.png"
+              src={getAssetPath("/images/logo.png")}
               alt="Agua Viva Holística Logo"
               fill
               className="object-contain p-0.5"

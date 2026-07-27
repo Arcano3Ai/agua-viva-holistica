@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Clock, MapPin, Users, Sparkles, Check, X } from "lucide-react";
 import { UPCOMING_EVENTS, EventItem } from "@/data/holisticData";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function Events() {
   const [bookingEvent, setBookingEvent] = useState<EventItem | null>(null);
@@ -54,7 +55,7 @@ export default function Events() {
               {/* Event Image */}
               <div className="relative sm:w-2/5 h-48 sm:h-auto min-h-[220px]">
                 <Image
-                  src={evt.image}
+                  src={getAssetPath(evt.image)}
                   alt={evt.title}
                   fill
                   className="object-cover"
