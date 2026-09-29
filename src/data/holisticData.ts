@@ -1,6 +1,12 @@
+export interface ServiceIncludeItem {
+  title: string;
+  description: string;
+}
+
 export interface ServiceItem {
   id: string;
   title: string;
+  subtitle?: string;
   shortDescription: string;
   fullDescription: string;
   iconName: string;
@@ -8,6 +14,11 @@ export interface ServiceItem {
   benefits: string[];
   image: string;
   facilitator?: string;
+  badge?: string;
+  featured?: boolean;
+  includes?: ServiceIncludeItem[];
+  quote?: string;
+  category?: 'Tarot & Sombra' | 'Energética & Cristales' | 'Ceremonias & Rituales' | 'Arte & Meditación';
 }
 
 export interface BenefitItem {
@@ -54,8 +65,59 @@ export interface FAQItem {
 
 export const SERVICES: ServiceItem[] = [
   {
+    id: "shadow-voice",
+    title: "Shadow Voice",
+    subtitle: "La Voz de tu Sombra",
+    badge: "⭐ MÁS SOLICITADO",
+    featured: true,
+    category: "Tarot & Sombra",
+    shortDescription: "Tarot confrontativo para mirar de frente patrones, heridas y decisiones que has callado, evitado o repetido.",
+    fullDescription: "Una experiencia de tarot confrontativo diseñada para explorar aquello que has callado, evitado o repetido. A través del tarot, la voz, los cuarzos y una dinámica de confrontación simbólica, la sesión te lleva a mirar de frente tus patrones, heridas y decisiones.\n\nUna sesión para mirar lo que normalmente no quieres mirar. No se trata de decirte lo que quieres escuchar. Se trata de ayudarte a escuchar lo que necesitas enfrentar.",
+    iconName: "Eye",
+    duration: "90 min",
+    benefits: [
+      "Lectura de Tarot Confrontativa",
+      "Dinámica Shadow Voice (La Voz de la Sombra)",
+      "Terapia e Integración con Cuarzos",
+      "Exploración de Patrones y Bloqueos",
+      "El Espejo: Confrontación Directa",
+      "Ritual de Cierre e Intención Personal"
+    ],
+    includes: [
+      {
+        title: "Lectura de Tarot Confrontativa",
+        description: "Lectura profunda enfocada en patrones emocionales, relaciones, bloqueos y situaciones que necesitas reconocer."
+      },
+      {
+        title: "Shadow Voice — La Voz de tu Sombra",
+        description: "Dinámica de confrontación mediante frases, preguntas y mensajes simbólicos que representan aquello que has estado evitando escuchar."
+      },
+      {
+        title: "Terapia con Cuarzos",
+        description: "Uso ritual y energético de cristales seleccionados para acompañar diferentes momentos de la sesión y favorecer concentración, introspección y relajación."
+      },
+      {
+        title: "Exploración de Patrones",
+        description: "Identificación de conductas, vínculos y situaciones que pueden estar repitiéndose en tu historia personal o familiar."
+      },
+      {
+        title: "El Espejo",
+        description: "Un momento de confrontación directa para reconocer qué puedes cambiar, qué necesitas soltar y qué estás eligiendo mantener."
+      },
+      {
+        title: "Ritual de Cierre",
+        description: "Integración de la experiencia mediante una carta final, intención personal y mensaje de cierre."
+      }
+    ],
+    quote: "No se trata de decirte lo que quieres escuchar. Se trata de ayudarte a escuchar lo que necesitas enfrentar.",
+    image: "/images/shadow-voice.jpg",
+    facilitator: "Lili Espinosa"
+  },
+  {
     id: "terapia-cuarzos",
     title: "Terapia con cuarzos",
+    badge: "Esencial",
+    category: "Energética & Cristales",
     shortDescription: "Canalización vibracional con cristales sagrados para alinear tus centros energéticos.",
     fullDescription: "La terapia con cuarzos aprovecha las frecuencias electromagnéticas y las propiedades piezoeléctricas de los cristales naturales para desbloquear los chakras, restaurar el campo electromagnético y facilitar estados profundos de paz física y mental.",
     iconName: "Gem",
@@ -67,6 +129,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "armonizacion-pendulo",
     title: "Armonización y consulta con péndulo",
+    badge: "Radiestesia",
+    category: "Energética & Cristales",
     shortDescription: "Radiestesia terapéutica para diagnosticar y restaurar el flujo vital del organismo.",
     fullDescription: "A través de la radiestesia holística y la kinesiología sutil, diagnosticamos bloqueos en el aura y los centros vitales. Permite tomar decisiones conscientes y devolver el flujo natural de energía pura al cuerpo.",
     iconName: "Compass",
@@ -78,6 +142,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "limpiezas-energeticas",
     title: "Limpiezas energéticas",
+    category: "Energética & Cristales",
     shortDescription: "Rituales de sahumado con hierbas sagradas, resinas naturales y frecuencias sonoras.",
     fullDescription: "Purificación profunda de tu campo áurico y espacios. Empleamos copal blanco, salvia sagrada, palosanto y cuencos tibetanos para disipar cargas pesadas, protegiendo tu paz interior.",
     iconName: "Sparkles",
@@ -89,6 +154,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "tarot-terapeutico",
     title: "Tarot terapéutico",
+    category: "Tarot & Sombra",
     shortDescription: "Una herramienta de autoconocimiento y sincronía simbólica para iluminar tu camino.",
     fullDescription: "Lejos de la adivinación dogmática, el Tarot Terapéutico funciona como un espejo del inconsciente (siguiendo la psicología analítica junguiana). Te ayuda a comprender patrones, soltar amarres del pasado y tomar decisiones alineadas con tu ser supremo.",
     iconName: "BookOpenCheck",
@@ -100,6 +166,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "ceremonias-cacao",
     title: "Ceremonias de cacao",
+    badge: "Medicina Ancestral",
+    category: "Ceremonias & Rituales",
     shortDescription: "Encuentro sagrado con la medicina ancestral del corazón para sanar y conectar.",
     fullDescription: "Un viaje amoroso guíado por la medicina del Cacao 100% puro y ceremonial. Combina cantos de medicina, respiración consciente, baño de sonido y aperturas emocionales para volver al estado natural del amor propio.",
     iconName: "HeartHandshake",
@@ -111,6 +179,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "circulos-mujeres",
     title: "Círculos de mujeres & Sanación de útero",
+    category: "Ceremonias & Rituales",
     shortDescription: "Espacio contenedor de sororidad, sanación del linaje femenino y nutrición del alma.",
     fullDescription: "Espacio seguro y amoroso donde las mujeres comparten, honran la ciclicidad lunar y sanan la herida ancestral. A través de la palabra sagrada, el Rito de la Matriz y la meditación guiada, reconectamos con la diosa interior.",
     iconName: "Users",
@@ -122,6 +191,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "elaboracion-mandalas",
     title: "Elaboración de mandalas",
+    category: "Arte & Meditación",
     shortDescription: "Arte meditativo para enfocar la mente, expresar emociones y centrar la atención.",
     fullDescription: "Taller vivencial de creación geométrica donde canalizas tus estados de ánimo y propósitos en mandalas de lienzo y pigmentos naturales. Integra la atención plena y el arte curativo.",
     iconName: "Palette",
@@ -133,6 +203,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "ojos-de-dios",
     title: "Ojos de Dios",
+    category: "Arte & Meditación",
     shortDescription: "Tejido ceremonial huichol (Sikuli) para la protección energética y la contemplación.",
     fullDescription: "Aprende el arte sagrado del tejido ancestral de hilos de colores sobre madera en forma de cruz. Cada hilo entrelazado actúa como una oración teñida de intención, amuleto de protección y presencia plena.",
     iconName: "Flower2",
@@ -144,6 +215,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "meditacion",
     title: "Meditación & Fuego Sagrado",
+    category: "Arte & Meditación",
     shortDescription: "Sesiones guiadas de Mindfulness, Pranayama y viajes sonoros con cuencos de cuarzo.",
     fullDescription: "Prácticas de quietud mental y presencia consciente. Guiamos técnicas de respiración (Pranayama) e inmersion en frecuencias solfeggio para reducir la presión sanguínea y cultivar serenidad permanente.",
     iconName: "Sun",
@@ -155,6 +227,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "reiki",
     title: "Reiki Usui Tradicional",
+    category: "Energética & Cristales",
     shortDescription: "Imposición de manos para canalizar la Energía Vital Universal hacia donde más lo necesitas.",
     fullDescription: "El Reiki Usui restablece la armonía holística en los planos físico, mental, emocional y espiritual. El terapeuta sirve como canal pasivo de luz para activar los mecanismos naturales de autocuración de tu cuerpo.",
     iconName: "HandHeart",
