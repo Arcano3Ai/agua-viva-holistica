@@ -97,10 +97,10 @@ export default function Testimonials() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Controls */}
+          {/* Desktop Navigation Controls */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 sm:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-[#C7A34B]/30 hover:bg-[#38B6C8] hover:text-white hover:border-transparent text-[#2E2E2E] flex items-center justify-center shadow-lg transition-all"
+            className="hidden sm:flex absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-[#C7A34B]/30 hover:bg-[#38B6C8] hover:text-white hover:border-transparent text-[#2E2E2E] items-center justify-center shadow-lg transition-all"
             aria-label="Anterior testimonio"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -108,27 +108,45 @@ export default function Testimonials() {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 sm:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-[#C7A34B]/30 hover:bg-[#38B6C8] hover:text-white hover:border-transparent text-[#2E2E2E] flex items-center justify-center shadow-lg transition-all"
+            className="hidden sm:flex absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-[#C7A34B]/30 hover:bg-[#38B6C8] hover:text-white hover:border-transparent text-[#2E2E2E] items-center justify-center shadow-lg transition-all"
             aria-label="Siguiente testimonio"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
 
-        {/* Carousel Indicators */}
-        <div className="flex justify-center items-center gap-2 mt-8">
-          {TESTIMONIALS.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                idx === currentIndex
-                  ? "w-8 bg-[#C7A34B]"
-                  : "w-2.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Ir al testimonio ${idx + 1}`}
-            />
-          ))}
+        {/* Carousel Indicators & Mobile Navigation Controls */}
+        <div className="flex justify-center items-center gap-4 mt-8">
+          <button
+            onClick={handlePrev}
+            className="sm:hidden w-10 h-10 rounded-full bg-white border border-[#C7A34B]/30 flex items-center justify-center text-[#2E2E2E] shadow-sm active:bg-[#38B6C8] active:text-white transition-colors"
+            aria-label="Anterior testimonio"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            {TESTIMONIALS.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  idx === currentIndex
+                    ? "w-8 bg-[#C7A34B]"
+                    : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label={`Ir al testimonio ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={handleNext}
+            className="sm:hidden w-10 h-10 rounded-full bg-white border border-[#C7A34B]/30 flex items-center justify-center text-[#2E2E2E] shadow-sm active:bg-[#38B6C8] active:text-white transition-colors"
+            aria-label="Siguiente testimonio"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

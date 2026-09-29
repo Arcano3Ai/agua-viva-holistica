@@ -122,7 +122,7 @@ export default function About() {
         </div>
 
         {/* Team Guides Grid */}
-        <div className="space-y-16">
+        <div className="space-y-12 sm:space-y-16">
           {TEAM_GUIDES.map((guide, gIdx) => (
             <motion.div
               key={guide.name}
@@ -130,14 +130,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: gIdx * 0.2 }}
-              className="glass-card rounded-3xl p-8 sm:p-12 border border-[#C7A34B]/30 shadow-2xl relative overflow-hidden bg-hero-gradient"
+              className="glass-card rounded-3xl p-5 sm:p-8 md:p-12 border border-[#C7A34B]/30 shadow-2xl relative overflow-hidden bg-hero-gradient"
             >
               {/* Subtle Background Glow */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#C7A34B]/10 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
                 {/* Guide Images Column */}
-                <div className={`lg:col-span-5 grid grid-cols-2 gap-4 ${gIdx % 2 === 1 ? "lg:order-last" : ""}`}>
+                <div className={`lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4 ${gIdx % 2 === 1 ? "lg:order-last" : ""}`}>
                   <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-[3/4] group">
                     <Image
                       src={getAssetPath(guide.imageMeditation)}
@@ -145,22 +145,22 @@ export default function About() {
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg text-center">
-                      <span className="font-poppins text-[10px] text-white/90 uppercase tracking-widest font-medium">
+                    <div className="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-center">
+                      <span className="font-poppins text-[9px] sm:text-[10px] text-white/90 uppercase tracking-wider sm:tracking-widest font-medium">
                         Presencia & Ritual
                       </span>
                     </div>
                   </div>
 
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-[3/4] group mt-6">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-[3/4] group mt-2 sm:mt-6">
                     <Image
                       src={getAssetPath(guide.imageStaff)}
                       alt={`${guide.name} ${guide.title}`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg text-center">
-                      <span className="font-poppins text-[10px] text-white/90 uppercase tracking-widest font-medium">
+                    <div className="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-center">
+                      <span className="font-poppins text-[9px] sm:text-[10px] text-white/90 uppercase tracking-wider sm:tracking-widest font-medium">
                         Sanación & Trabajo
                       </span>
                     </div>
@@ -168,18 +168,18 @@ export default function About() {
                 </div>
 
                 {/* Guide Story Content Column */}
-                <div className="lg:col-span-7 space-y-6">
+                <div className="lg:col-span-7 space-y-5 sm:space-y-6">
                   <div>
-                    <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-[#2E2E2E]">
-                      {guide.name} <span className="text-gold-gradient italic font-normal">{guide.title}</span>
+                    <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-[#2E2E2E] leading-tight">
+                      {guide.name} <span className="text-gold-gradient italic font-normal block sm:inline">{guide.title}</span>
                     </h3>
-                    <p className="font-poppins text-xs text-[#7FAE8C] font-semibold uppercase tracking-widest mt-1">
+                    <p className="font-poppins text-xs text-[#7FAE8C] font-semibold uppercase tracking-widest mt-1.5">
                       {guide.role}
                     </p>
                   </div>
 
                   {/* Quote Box */}
-                  <blockquote className="border-l-2 border-[#C7A34B] pl-4 italic font-playfair text-base sm:text-lg text-[#2E2E2E]/90 bg-white/40 p-3 rounded-r-xl">
+                  <blockquote className="border-l-2 border-[#C7A34B] pl-4 italic font-playfair text-sm sm:text-base md:text-lg text-[#2E2E2E]/90 bg-white/40 p-3 rounded-r-xl leading-relaxed">
                     "{guide.quote}"
                   </blockquote>
 

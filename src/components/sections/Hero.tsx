@@ -158,7 +158,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4 }}
-          className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#2E2E2E] leading-none mb-6"
+          className="font-playfair text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-[#2E2E2E] leading-tight mb-6"
         >
           AGUA VIVA <span className="text-gold-gradient font-normal italic">HOLÍSTICA</span>
         </motion.h1>
