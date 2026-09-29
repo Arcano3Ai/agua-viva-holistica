@@ -62,7 +62,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "60 min",
     benefits: ["Alineación de Chakras", "Alivio del estrés profundo", "Equilibrio electro-vibracional"],
     image: "/images/service-cuarzos.png",
-    facilitator: "Lilivett Muñoz & Adrián"
+    facilitator: "Lili Espinosa & Adrián"
   },
   {
     id: "armonizacion-pendulo",
@@ -72,8 +72,8 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Compass",
     duration: "50 min",
     benefits: ["Claridad mental y emocional", "Diagnóstico de bloqueos energéticos", "Sensación de ligereza inmediata"],
-    image: "/images/lilivett_pendulo.jpg",
-    facilitator: "Lilivett Muñoz"
+    image: "/images/lili_pendulo.jpg",
+    facilitator: "Lili Espinosa"
   },
   {
     id: "limpiezas-energeticas",
@@ -95,7 +95,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "60 min",
     benefits: ["Autoconocimiento elevado", "Desbloqueo de decisiones estancadas", "Integración de sombra y luz"],
     image: "/images/service-tarot.png",
-    facilitator: "Lilivett Muñoz"
+    facilitator: "Lili Espinosa"
   },
   {
     id: "ceremonias-cacao",
@@ -106,7 +106,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "120 min",
     benefits: ["Apertura del chakra corazón", "Liberación emocional suave", "Conexión profunda con la comunidad"],
     image: "/images/cacao.png",
-    facilitator: "Lilivett Muñoz & Adrián"
+    facilitator: "Lili Espinosa & Adrián"
   },
   {
     id: "circulos-mujeres",
@@ -117,7 +117,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "90 min",
     benefits: ["Sanación del linaje femenino", "Red de contención amorosa", "Honra de la sagrada ciclicidad"],
     image: "/images/service-circulo.png",
-    facilitator: "Lilivett Muñoz"
+    facilitator: "Lili Espinosa"
   },
   {
     id: "elaboracion-mandalas",
@@ -128,7 +128,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "90 min",
     benefits: ["Desarrollo de la atención plena", "Expresión creativa liberadora", "Reducción de la ansiedad"],
     image: "/images/about.png",
-    facilitator: "Lilivett Muñoz"
+    facilitator: "Lili Espinosa"
   },
   {
     id: "ojos-de-dios",
@@ -139,7 +139,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "90 min",
     benefits: ["Meditación activa a través del hilo", "Creación de amuleto personal", "Paz interior sostenida"],
     image: "/images/quartz.png",
-    facilitator: "Lilivett Muñoz"
+    facilitator: "Lili Espinosa"
   },
   {
     id: "meditacion",
@@ -161,7 +161,7 @@ export const SERVICES: ServiceItem[] = [
     duration: "60 min",
     benefits: ["Aceleración de procesos curativos", "Relajación física profunda", "Revitalización del campo áurico"],
     image: "/images/service-cuarzos.png",
-    facilitator: "Adrián & Lilivett Muñoz"
+    facilitator: "Adrián & Lili Espinosa"
   }
 ];
 
@@ -350,14 +350,14 @@ export const ADRIAN_GUIDE: GuideInfo = {
   ]
 };
 
-export const LILIVETT_GUIDE: GuideInfo = {
-  name: "Lilivett Muñoz",
+export const LILI_GUIDE: GuideInfo = {
+  name: "Lili Espinosa",
   title: "Maestra Ceremonial & Especialista Holística",
   role: "Co-Fundadora & Terapeuta Holística",
   quote: "La sanación ocurre cuando abrimos el corazón a la medicina sagrada de la tierra, la luz de los cristales y la sabiduría del alma.",
-  story: "Co-fundadora de Agua Viva Holística, Lilivett es especialista en guiar procesos profundos de sanación femenina, armonización energética y reconexión espiritual. Su presencia amorosa y canalización sutil crean un espacio contenedor de alta vibración para liberar bloqueos y restaurar la vitalidad física, mental y emocional.",
-  imageMeditation: "/images/lilivett_pendulo.jpg",
-  imageStaff: "/images/lilivett_cuarzos.jpg",
+  story: "Co-fundadora de Agua Viva Holística, Lili Espinosa es especialista en guiar procesos profundos de sanación femenina, armonización energética y reconexión espiritual. Su presencia amorosa y canalización sutil crean un espacio contenedor de alta vibración para liberar bloqueos y restaurar la vitalidad física, mental y emocional.",
+  imageMeditation: "/images/lili_espinosa.jpg",
+  imageStaff: "/images/lili_pendulo.jpg",
   specialties: [
     "Ceremonias de Cacao & Círculos Sagrados",
     "Sanación de Útero & Linaje Femenino",
@@ -366,4 +366,5 @@ export const LILIVETT_GUIDE: GuideInfo = {
   ]
 };
 
-export const TEAM_GUIDES: GuideInfo[] = [ADRIAN_GUIDE, LILIVETT_GUIDE];
+export const TEAM_GUIDES: GuideInfo[] = [ADRIAN_GUIDE, LILI_GUIDE];
+
