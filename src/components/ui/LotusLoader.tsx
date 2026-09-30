@@ -9,9 +9,19 @@ export default function LotusLoader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("agua_viva_loader_seen")) {
+      setLoading(false);
+      return;
+    }
+
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2800);
+      try {
+        sessionStorage.setItem("agua_viva_loader_seen", "true");
+      } catch {
+        // Ignore storage errors in private browsing
+      }
+    }, 1600);
 
     return () => clearTimeout(timer);
   }, []);
@@ -22,7 +32,7 @@ export default function LotusLoader() {
         <motion.div
           key="lotus-loader"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.9, ease: "easeInOut" } }}
+          exit={{ opacity: 0, pointerEvents: "none" as const, transition: { duration: 0.5, ease: "easeInOut" } }}
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#FAFAF7] overflow-hidden"
         >
           {/* Subtle water ripple background glow */}

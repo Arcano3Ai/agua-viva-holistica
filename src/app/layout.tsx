@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import LotusLoader from "@/components/ui/LotusLoader";
 import FloatingActions from "@/components/ui/FloatingActions";
+import AudioPlayer from "@/components/ui/AudioPlayer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -119,6 +120,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingActions />
+        <AudioPlayer />
       </body>
     </html>
   );
