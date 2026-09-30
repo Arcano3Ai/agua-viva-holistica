@@ -19,8 +19,11 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const siteUrl = "https://arcano3ai.github.io/agua-viva-holistica";
+const logoUrl = "https://arcano3ai.github.io/agua-viva-holistica/images/logo.png";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aguavivaholistica.com"),
+  metadataBase: new URL(siteUrl),
   title: "Agua Viva Holística | Centro de Sanación, Cristales y Armonización",
   description:
     "Un espacio sagrado para sanar cuerpo, mente y espíritu. Terapias con cuarzos, armonización con péndulo, ceremonias de cacao, círculos de mujeres, tarot terapéutico y reiki.",
@@ -38,21 +41,36 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Agua Viva Holística" }],
   openGraph: {
-    title: "Agua Viva Holística | Centro de Sanación y Bienestar Premium",
+    title: "Agua Viva Holística | Centro de Sanación y Bienestar",
     description:
       "Un espacio para sanar cuerpo, mente y espíritu. Terapias energéticas, sonido sagrado y crecimiento espiritual.",
-    url: "https://aguavivaholistica.com",
+    url: siteUrl,
     siteName: "Agua Viva Holística",
     images: [
       {
-        url: "/images/logo.png",
+        url: logoUrl,
         width: 800,
         height: 800,
         alt: "Logo Agua Viva Holística",
+        type: "image/png",
       },
     ],
     locale: "es_MX",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Agua Viva Holística | Centro de Sanación y Bienestar",
+    description:
+      "Un espacio para sanar cuerpo, mente y espíritu. Terapias energéticas, sonido sagrado y crecimiento espiritual.",
+    images: [logoUrl],
+  },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+  other: {
+    image_src: logoUrl,
   },
   robots: {
     index: true,
@@ -76,7 +94,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Agua Viva Holística",
-    "image": "https://aguavivaholistica.com/images/logo.png",
+    "image": logoUrl,
     "description": "Un espacio para sanar cuerpo, mente y espíritu con terapias con cuarzos, armonización con péndulo y ceremonias ancestrales.",
     "address": {
       "@type": "PostalAddress",
@@ -91,13 +109,11 @@ export default function RootLayout({
 
   return (
     <html lang="es" className={`${playfair.variable} ${poppins.variable} scroll-smooth`}>
-      <head>
+      <body className="bg-[#FAFAF7] text-[#2E2E2E] antialiased selection:bg-[#38B6C8] selection:text-white">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="bg-[#FAFAF7] text-[#2E2E2E] antialiased selection:bg-[#38B6C8] selection:text-white">
         <LotusLoader />
         <Navbar />
         <main>{children}</main>
